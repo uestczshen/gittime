@@ -8,5 +8,5 @@ release: build
 	docker build -t uestczshen/httpserver:${tag} .
 
 push: release
-	echo "pushing zz/module3/httpserver"
+	echo "pushing uestczshen/httpserver"
 	docker push uestczshen/httpserver:${tag}
