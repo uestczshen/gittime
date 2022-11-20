@@ -74,9 +74,11 @@ func handleRoot(w http.ResponseWriter, req *http.Request) {
 }
 
 func handleHealthz(w http.ResponseWriter, req *http.Request) {
+	logger.Printf("healthz")
 	w.WriteHeader(http.StatusAccepted)
 }
 
 func handlePreStop(w http.ResponseWriter, req *http.Request) {
+	logger.Printf("preStop")
 	w.WriteHeader(http.StatusOK)
 }

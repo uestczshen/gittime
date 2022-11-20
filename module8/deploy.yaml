@@ -6,7 +6,7 @@ spec:
   containers:
     - name: module8
       image: uestczshen/httpserver:v1.0
-      cmd:
+      command:
         - ./httpserver
       livenessProbe:
         httpGet:
