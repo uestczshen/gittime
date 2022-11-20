@@ -1,0 +1,4 @@
+##作业说明
+
+Dockerfile0是想利用Makefile在本地编译httpserver,并将编译结果httpserver打包上传。
+但是听了领教课之后发现确实利用golang容器编译httpserver可以不依赖本地环境,适应性更好。
