@@ -23,6 +23,7 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", safeHandler(handleRoot))
 	mux.HandleFunc("/healthz", handleHealthz)
+	mux.HandleFunc("prestop", handlePreStop)
 	server := &http.Server{Addr: ":8080", Handler: mux}
 	go func() {
 		err := server.ListenAndServe()
