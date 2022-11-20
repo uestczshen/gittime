@@ -25,4 +25,11 @@ spec:
         requests:
           cpu: 1m
           memory: 100Mi
-      qosClass: Burstable 
+      lifecycle:
+        preStop:
+          httpGet:
+          path: /prestop
+          port: 8080
+          httpHeaders:
+            - name: X-Uestczshen-Header
+              value: YannZhu
