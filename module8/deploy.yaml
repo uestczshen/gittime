@@ -1,8 +1,6 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  labels:
-    app: httpserver
   name: httpserver-deploy
 spec:
   replicas: 2
