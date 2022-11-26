@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: module8
+  labels:
+    app: httpserver
 spec:
   containers:
     - name: module8
@@ -28,8 +30,8 @@ spec:
       lifecycle:
         preStop:
           httpGet:
-          path: /prestop
-          port: 8080
-          httpHeaders:
-            - name: X-Uestczshen-Header
-              value: YannZhu
+            path: /prestop
+            port: 8080
+            httpHeaders:
+              - name: X-Uestczshen-Header
+                value: YannZhu
